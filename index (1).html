@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Adeshay helps authors improve their Amazon book pages so more readers can find, trust, and buy their books. Free page review.">
+<meta property="og:title" content="Adeshay | Amazon book page optimization for authors">
+<meta property="og:description" content="Your book deserves to be found on Amazon. Get a free review of your book page.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+<noscript><style>.view{display:block!important}</style></noscript>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adeshay | Amazon book page optimization for authors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F5F7;--surface:#FFFFFF;--ink:#15233B;--muted:#53627A;--line:#D5DDE5;
+  --accent:#0E7C86;--accent-ink:#FFFFFF;--mark:#FFE08A;--mark-ink:#15233B;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1A2B;--surface:#16243A;--ink:#EAF0F7;--muted:#A3B1C6;--line:#2B3C57;
+    --accent:#4FC3CC;--accent-ink:#0F1A2B;--mark:#5C4A12;--mark-ink:#FFF3CC;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1A2B;--surface:#16243A;--ink:#EAF0F7;--muted:#A3B1C6;--line:#2B3C57;
+  --accent:#4FC3CC;--accent-ink:#0F1A2B;--mark:#5C4A12;--mark-ink:#FFF3CC;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Newsreader",Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,6.5vw,3.8rem);font-weight:700}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1040px;margin:0 auto;flex-wrap:wrap}
+.brand{font-family:"Newsreader",Georgia,serif;font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:14px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.view{display:none}
+.view.on{display:block}
+section{padding:56px 0}
+.hero{display:grid;gap:36px;grid-template-columns:1fr;align-items:center;padding:48px 0 40px}
+@media(min-width:860px){.hero{grid-template-columns:1.05fr 1fr}}
+.lead{font-size:1.2rem;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+/* listing mock */
+.listing{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;grid-template-columns:96px 1fr;gap:16px}
+.cover{background:var(--ink);color:var(--bg);border-radius:3px;aspect-ratio:2/3;display:flex;align-items:flex-end;padding:8px;font-family:"Newsreader",Georgia,serif;font-weight:700;font-size:.85rem;line-height:1.1}
+.listing h3{font-size:1.1rem;margin-bottom:.2em}
+.stars{color:#C77700;font-size:.9rem}
+.listing p{font-size:.92rem;margin-bottom:.6em}
+mark{background:var(--mark);color:var(--mark-ink);padding:1px 3px;border-radius:3px}
+.notes{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:8px;font-size:.9rem;color:var(--muted)}
+.notes span{display:block}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.item{border-top:3px solid var(--accent);padding-top:14px}
+.item p{color:var(--muted);margin-bottom:0}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:22px;max-width:720px}
+.steps li{counter-increment:s;padding-left:56px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;display:grid;place-items:center}
+.steps h3{margin-bottom:.15em}
+.steps p{color:var(--muted);margin:0}
+.honest{border-left:4px solid var(--accent);padding:4px 0 4px 20px;max-width:680px}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:720px}
+summary{cursor:pointer;font-weight:700;font-size:1.05rem}
+details p{margin:10px 0 0;color:var(--muted)}
+.cta{text-align:center}
+.cta p{margin-inline:auto;color:var(--muted)}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.cmp{margin:28px 0 36px;max-width:860px}
+.cmp h3{margin-bottom:.4em}
+.pair{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:700px){.pair{grid-template-columns:1fr 1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:.95rem}
+.box b{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+.box.after{border-color:var(--accent)}
+.why{color:var(--muted);font-size:.95rem;margin:10px 0 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#home">Adeshay</a>
+    <nav aria-label="Main">
+      <a href="#home" data-v="home">Home</a>
+      <a href="#services" data-v="services">What we do</a>
+      <a href="#sample" data-v="sample">Sample audit</a>
+      <a href="#how" data-v="how">How it works</a>
+      <a href="#about" data-v="about">About</a>
+      <a href="#faq" data-v="faq">Questions</a>
+      <a href="#contact" data-v="contact">Free review</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="view" id="v-home">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>Your book deserves to be found on Amazon.</h1>
+        <p class="lead">We help authors turn their Amazon book page into something readers can find, trust, and buy from.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Get a free review of your book page</a>
+          <a class="btn alt" href="#services">See what we fix</a>
+        </div>
+      </div>
+      <div class="listing" role="img" aria-label="Example Amazon book listing with three notes on what we would improve">
+        <div class="cover">The Quiet Harbor</div>
+        <div>
+          <h3><mark>The Quiet Harbor: A Small Town Mystery</mark></h3>
+          <div class="stars">★★★★☆ 38 ratings</div>
+          <p>A retired nurse, a missing letter, and a town that keeps its secrets. <mark>For readers who love cozy mysteries with heart.</mark></p>
+        </div>
+        <div class="notes">
+          <span>Title and subtitle use words readers actually search for.</span>
+          <span>The description opens with a pitch, then names the reader it is for.</span>
+          <span>Categories and keywords match the genre, so the book shows up in the right lists.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band"><section class="wrap">
+    <h2>The book is rarely the problem.</h2>
+    <p>You wrote the book. You published it. Now it sits on Amazon and sales are slow.</p>
+    <p>Most of the time the page is what holds it back. A weak title setup, a vague description, the wrong categories, and keywords nobody searches for can keep a good book out of sight.</p>
+  </section></div>
+
+  <section class="wrap">
+    <h2>Who this is for</h2>
+    <p>First time authors who just published, and experienced authors whose older books have gone quiet. Fiction and nonfiction, self published or independent.</p>
+    <div class="honest">
+      <h3>An honest note</h3>
+      <p>We cannot promise bestseller rank or a set number of sales. Nobody honest can. What we can do is make sure your book is presented as well as it can be, so the readers who do find it have every reason to buy.</p>
+    </div>
+  </section>
+
+  <div class="band"><section class="wrap cta">
+    <h2>Let’s look at your book page together.</h2>
+    <p>Send us your Amazon link and we will tell you what we see. No pressure and no obligation.</p>
+    <a class="btn" href="#contact">Request my free review</a>
+  </section></div>
+</div>
+
+<!-- SERVICES -->
+<div class="view" id="v-services">
+  <section class="wrap">
+    <h1>What we do</h1>
+    <p class="lead">We look at your listing the way a reader and the Amazon search system both see it, then fix what is holding it back.</p>
+    <div class="grid" style="margin-top:32px">
+      <div class="item"><h3>Title and subtitle</h3><p>Wording that matches what readers search for, without making your book sound like everyone else’s.</p></div>
+      <div class="item"><h3>Book description</h3><p>A pitch that makes a browsing reader want the first page, not a summary that gives the story away.</p></div>
+      <div class="item"><h3>Keywords and categories</h3><p>Research for your genre so your book appears in the lists where your readers already look.</p></div>
+      <div class="item"><h3>Author Central</h3><p>Setup and cleanup of your author profile, bio, and book links.</p></div>
+      <div class="item"><h3>First impressions review</h3><p>Plain feedback on your cover and sample pages, since both shape the buying decision.</p></div>
+      <div class="item"><h3>Pricing and formats</h3><p>Simple advice on pricing and on how to set up Kindle and print editions.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- HOW -->
+<div class="view" id="v-how">
+  <section class="wrap">
+    <h1>How it works</h1>
+    <p class="lead">Four steps, and you stay in control of each one.</p>
+    <ol class="steps" style="margin-top:32px">
+      <li><h3>Send your book link</h3><p>We review your page for free.</p></li>
+      <li><h3>We tell you plainly</h3><p>You get an honest list of what is working and what is not.</p></li>
+      <li><h3>We agree on scope and price</h3><p>Only if you want our help. There is no pressure to continue.</p></li>
+      <li><h3>We update your listing</h3><p>You see every change we made, so nothing is hidden.</p></li>
+    </ol>
+    <p style="margin-top:36px"><a class="btn" href="#contact">Start with the free review</a></p>
+  </section>
+</div>
+
+<!-- FAQ -->
+<div class="view" id="v-faq">
+  <section class="wrap">
+    <h1>Questions</h1>
+    <details><summary>Do I need to be on KDP?</summary><p>No. We work with books published in different ways, as long as they are on Amazon.</p></details>
+    <details><summary>Will you change my book?</summary><p>No. We only work on how your book is presented and found.</p></details>
+    <details><summary>How long does it take?</summary><p>Most listing updates are done within a few days after we agree on the scope.</p></details>
+    <details><summary>Can you guarantee sales?</summary><p>No. We cannot promise rank or a number of sales. We make your page as strong as it can be.</p></details>
+    <p style="margin-top:32px"><a class="btn" href="#contact">Request my free review</a></p>
+  </section>
+</div>
+
+<!-- SAMPLE -->
+<div class="view" id="v-sample">
+  <section class="wrap">
+    <h1>Sample audit</h1>
+    <p class="lead">This is the kind of review you get for free. The book and the findings below are made up to show you the format.</p>
+    <div class="cmp">
+      <h3>Title and subtitle</h3>
+      <div class="pair"><div class="box"><b>Before</b>The Quiet Harbor</div><div class="box after"><b>After</b>The Quiet Harbor: A Small Town Cozy Mystery</div></div>
+      <p class="why">Readers search for the kind of book they want. Naming the genre in the subtitle helps the right readers find it.</p>
+    </div>
+    <div class="cmp">
+      <h3>Book description</h3>
+      <div class="pair"><div class="box"><b>Before</b>A story about a woman and a town.</div><div class="box after"><b>After</b>A retired nurse, a missing letter, and a town that keeps its secrets. For readers who love cozy mysteries with heart.</div></div>
+      <p class="why">The new opening gives a reason to keep reading and says who the book is for.</p>
+    </div>
+    <div class="cmp">
+      <h3>Categories</h3>
+      <div class="pair"><div class="box"><b>Before</b>Fiction, General</div><div class="box after"><b>After</b>Mystery, Cozy, Small Town and Rural</div></div>
+      <p class="why">Specific categories put the book in front of readers who browse that exact list.</p>
+    </div>
+    <div class="cmp">
+      <h3>Keywords</h3>
+      <div class="pair"><div class="box"><b>Before</b>book, story, novel</div><div class="box after"><b>After</b>cozy mystery with older heroine, small town mystery series, amateur sleuth</div></div>
+      <p class="why">Short, specific phrases that match real searches work better than single general words.</p>
+    </div>
+    <div class="cmp">
+      <h3>Cover and sample pages</h3>
+      <div class="box after">No change needed. The cover reads clearly at thumbnail size and the first chapter opens well.</div>
+      <p class="why">We only recommend changes that matter. If something is already working, we say so.</p>
+    </div>
+    <p><a class="btn" href="#contact">Get this review for your book</a></p>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div class="view" id="v-about">
+  <section class="wrap">
+    <h1>About Adeshay</h1>
+    <p class="lead">Adeshay helps authors make their Amazon book page clear, findable, and easy to say yes to.</p>
+    <p>Many good books go unnoticed because the page does not explain them well. The work is to fix that, one book at a time, so the readers who find your book know right away why it is for them.</p>
+    <h2 style="margin-top:36px">How we work</h2>
+    <div class="grid">
+      <div class="item"><h3>Plain talk</h3><p>You get clear feedback in simple language, with no jargon.</p></div>
+      <div class="item"><h3>No pressure</h3><p>The first review is free, and you decide what happens next.</p></div>
+      <div class="item"><h3>Full visibility</h3><p>You see every change we make to your listing.</p></div>
+    </div>
+    <div class="honest" style="margin-top:36px">
+      <h3>What we will not do</h3>
+      <p>We do not buy reviews, invent numbers, or promise results we cannot control. Your name is on the book, and we protect it.</p>
+    </div>
+    <p style="margin-top:36px"><a class="btn" href="#contact">Request my free review</a></p>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<div class="view" id="v-contact">
+  <section class="wrap">
+    <h1>Request your free review</h1>
+    <p class="lead">Send us your Amazon book link. We will reply with what we see and what we would change.</p>
+    <p>Email your link, your book title, and your genre, and tell us if there is anything specific you want checked.</p>
+    <p><a class="btn" href="mailto:adeshhay@gmail.com?subject=Free%20book%20page%20review&amp;body=Amazon%20link%3A%0ABook%20title%3A%0AGenre%3A%0AAnything%20specific%20to%20check%3A">Email us your book link</a></p>
+    <p style="color:var(--muted)">Prefer to write your own message? Email adeshhay@gmail.com. No pressure and no obligation.</p>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap">Adeshay. Amazon page optimization for authors. adeshhay@gmail.com</div></footer>
+
+<script>
+(function(){
+  var views=['home','services','sample','how','about','faq','contact'];
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(views.indexOf(h)<0)h='home';
+    views.forEach(function(v){
+      document.getElementById('v-'+v).classList.toggle('on',v===h);
+    });
+    document.querySelectorAll('nav a').forEach(function(a){
+      if(a.dataset.v===h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);
+  show();
+})();
+</script>
+</body>
+</html>
